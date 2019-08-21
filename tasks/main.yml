@@ -8,7 +8,7 @@
   
   - name: Installed java version
     debug:
-      var: "{{java_installed.stdout}}"
+      var: "{{ java_installed.results.stdout }}"
 
   - block:  
     - name: Download Java
@@ -30,4 +30,4 @@
     - name: Clean up
       file: state=absent path="{{ java_package }}"
     
-    when: java_installed.stdout == ""
+    when: java_installed.results.stdout == ""
