@@ -7,7 +7,8 @@
     register: java_installed
   
   - name: Installed java version
-    debug: "msg={{java_installed.stdout}}"
+    debug:
+      var: "{{java_installed.stdout}}"
 
   - block:  
     - name: Download Java
