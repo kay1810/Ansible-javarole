@@ -1,6 +1,6 @@
 ---
 
-# Ansible role to install Oracle Java 7
+# Ansible role to install Oracle Java 12
 
   - name: Check If java is already installed or not
     shell: "{{ java_name }}/bin/java -version 2>&1 | grep version | awk '{print $3}' | sed 's/\"//g'"
