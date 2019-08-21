@@ -11,10 +11,10 @@
 
   - block:  
     - name: Download Java
-        get_url:
-          url: "{{ download_url }}"
-          dest: "{{ java_package }}"
-          headers: 'Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie; --no-check-certificate'     
+      get_url:
+        url: "{{ download_url }}"
+        dest: "{{ java_package }}"
+        headers: 'Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie; --no-check-certificate'     
 
     - yum:
         name: "{{ java_package }}"
